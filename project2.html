@@ -1,0 +1,557 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashfak Portfolio</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#0f172a,#1e293b,#111827);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .container{
+      width: 100%;
+    }
+
+    /* NAVBAR */
+    nav{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo{
+      font-size: 28px;
+      font-weight: bold;
+      color: #38bdf8;
+      letter-spacing: 2px;
+    }
+
+    nav ul{
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover{
+      color: #38bdf8;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      padding: 80px 8%;
+    }
+
+    .hero-text{
+      max-width: 500px;
+    }
+
+    .hero-text h1{
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text span{
+      color: #38bdf8;
+    }
+
+    .hero-text p{
+      font-size: 18px;
+      color: #d1d5db;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn{
+      display: inline-block;
+      padding: 12px 30px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      background: white;
+      transform: scale(1.05);
+    }
+
+    /* GLASS CARD */
+    .glass-card{
+      width: 300px;
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .glass-card img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .glass-card h2{
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .glass-card p{
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    /* DAILY PLAN SECTION */
+    .dailyplan{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 25px;
+      padding: 40px 8% 80px;
+    }
+
+    .workoutbox,
+    .studybox,
+    .practicebox{
+      background: rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .workoutbox:hover,
+    .studybox:hover,
+    .practicebox:hover{
+      transform: translateY(-8px);
+    }
+
+    .dailyplan h2{
+      margin-bottom: 20px;
+      color: #38bdf8;
+      text-align: center;
+    }
+
+    .dailyplan ul{
+      list-style: none;
+    }
+
+    .dailyplan ul li{
+      margin-bottom: 12px;
+      line-height: 1.6;
+      color: #e5e7eb;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      nav{
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-text h1{
+        font-size: 40px;
+      }
+
+      .hero{
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR 
+    <nav>
+      <div class="logo">ASHFAK</div>
+
+      <ul>
+        <li><a href="#workout">WORKOUT</a></li>
+        <li><a href="#study">STUDY</a></li>
+        <li><a href="#practice">PRACTICE</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO SECTION 
+    <section class="hero" id="workout">
+
+      <div class="hero-text">
+        <h1>HELLO I'M <span>ASHFAK</span></h1>
+
+        <p>
+          I'M A BCA STUDENT AND FRONTEND DEVELOPER.
+          I LOVE MODERN UI DESIGN, RESPONSIVE WEBSITES
+          AND CREATIVE WEB PROJECTS.
+        </p>
+
+        <a href="#" class="btn">HIRE ME</a>
+      </div>
+
+      <div class="glass-card">
+        <img src="https://i.pravatar.cc/300" alt="profile">
+
+        <h2>BCA STUDENT</h2>
+
+        <p>
+          PASSIONATE ABOUT MODERN UI DESIGN,
+          ANIMATION AND RESPONSIVE LAYOUTS.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- DAILY PLAN
+    <section class="dailyplan">
+
+      <!-- WORKOUT 
+      <div class="workoutbox">
+
+        <h2>WORKOUT PLAN</h2>
+
+        <ul>
+          <li>MONDAY: CHEST AND TRICEPS</li>
+          <li>TUESDAY: BACK AND BICEPS</li>
+          <li>WEDNESDAY: LEGS AND SHOULDERS</li>
+          <li>THURSDAY: CARDIO AND CORE</li>
+          <li>FRIDAY: FULL BODY WORKOUT</li>
+          <li>SATURDAY: ACTIVE RECOVERY OR YOGA</li>
+          <li>SUNDAY: REST DAY</li>
+        </ul>
+
+      </div>
+
+      <!-- STUDY 
+      <div class="studybox" id="study">
+
+        <h2>STUDY PLAN</h2>
+
+        <ul>
+          <li>MONDAY: HTML & CSS BASICS</li>
+          <li>TUESDAY: JAVASCRIPT FUNDAMENTALS</li>
+          <li>WEDNESDAY: REACT / VUE / ANGULAR</li>
+          <li>THURSDAY: NODE.JS / EXPRESS / PYTHON</li>
+          <li>FRIDAY: DATABASES (MYSQL / MONGODB)</li>
+          <li>SATURDAY: PROJECT & PORTFOLIO BUILDING</li>
+          <li>SUNDAY: ENJOY MY DAY!</li>
+        </ul>
+
+      </div>
+
+      <!-- PRACTICE 
+      <div class="practicebox" id="practice">
+
+        <h2>PRACTICE PLAN</h2>
+
+        <ul>
+          <li>TIME: 2 HOURS DAILY AFTERNOON</li>
+          <li>MONDAY: PERSONAL PORTFOLIO WEBSITE</li>
+          <li>TUESDAY: TO-DO LIST APPLICATION</li>
+          <li>WEDNESDAY: WEATHER APP USING API</li>
+          <li>THURSDAY: RESPONSIVE BLOG DESIGN</li>
+          <li>FRIDAY: SIMPLE E-COMMERCE SITE</li>
+          <li>SATURDAY: OPEN-SOURCE CONTRIBUTION</li>
+          <li>SUNDAY: REVIEW & REFLECT</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+        html{
+            scroll-behavior:smooth;
+      }
+        body{
+            background:linear-gradient(135deg,#141e30,#243b55);
+            color:white;
+            min-height: 100vh;
+        }        
+        .container{
+            width: 90%;
+            max-width:1200px;
+            margin:auto ;
+       }
+       nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+       }
+       .logo{
+        font-size:28px;
+        font-weight: 700;
+        color:#00e5ff;
+       }
+       nav ul{
+        display:flex;
+        gap: 25px;
+        list-style:none;
+       }
+       nav ul li a{
+        text-decoration:none;
+        color:white;
+        transition:0.3s;
+       }
+       nav ul li a:hover{
+        color:#00e5ff;
+       }
+        .hero{
+          display:flex;
+          justify-content: space-between;
+          align-items: center;
+          min-height: 85vh;
+        }
+        .hero-text{
+            max-width: 500px;
+        }
+        .hero-text h1{
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+        .hero-text span{
+            color:#00e5ff;
+        }
+        .hero-text p{
+            font-size:18px;
+            color:#d1d5db;
+            margin-bottom:25px;
+            line-height:1.6;
+        }
+        .btn{
+            display:inline-block;
+            padding:12px 30px;
+            background:#00e5ff;
+            color:black;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:700;
+            transition:0.3s;
+        }
+        .btn:hover{
+            background:#00e5ff;
+            transform:scale(1.05);
+            box-shadow:0 0 20px #00e5ff;
+        }   
+        .glass-card{
+            width:300px;
+            padding:25px;
+            border-radius:20px;
+            background:rgba(255,255,255,0.08);
+            border:1px solid rgba(255,255,255,0.1);
+            backdrop-filter:blur(12px);
+            text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        }
+        .glass-card img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid #00e5ff;
+            margin-bottom:15px;
+        }
+        .glass-card h2{
+            margin-bottom:10px;
+            color:#00e5ff;
+        }
+
+        .glass-card p{
+            color:#d1d5db;
+            line-height:1.5;
+        }
+        .dailyplan{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+            padding:40px 0 80px;
+        }
+        .workoutbox,
+        .studybox,
+        .practicebox{
+            background:rgba(255,255,255,0.08);
+            padding:25px;
+            border-radius:20px;
+            border:1px solid rgba(255,255,255,0.1);
+            backdrop-filter:blur(10px);
+            transition:0.3s;
+        }
+        .workoutbox:hover,
+        .studybox:hover,
+        .practicebox:hover{
+            transform:translateY(-8px);
+            box-shadow: 0 0 20px rgba(0,229,255,0.5);
+        }
+
+
+        .dailyplan h2{
+            margin-bottom:20px;
+            color:#00e5ff;
+            text-align:center;
+        }
+        .dailyplan ul{
+            list-style:none;
+        }
+        .dailyplan ul li{
+            margin-bottom:12px;
+            line-height:1.6;
+            color:#e5e7eb;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+            padding-bottom:8px;
+            }
+        @media(max-width:768px){
+            nav{
+                flex-direction:column;
+                gap:20px;
+            }
+            .hero-text h1{
+                font-size:40px;
+            }
+            .hero{
+                text-align:center;
+                flex-direction:column;
+            }
+                 .glass-card{
+                    margin-top:30px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+ 
+     <!-- NAVBAR -->
+     <nav>
+       <div class="logo">ASHFAK</div>
+ 
+       <ul>
+         <li><a href="#workout">WORKOUT</a></li>
+         <li><a href="#study">STUDY</a></li>
+         <li><a href="#practice">PRACTICE</a></li>
+         </ul>
+    </nav>
+    <section class="hero" id="workout">
+        <div class="hero-text">
+            <h1>HELLO I'M <span>ASHFAK</span></h1>
+            <p>
+                I'M A BCA STUDENT AND FRONTEND DEVELOPER.
+                I LOVE MODERN UI DESIGN, RESPONSIVE WEBSITES
+                AND CREATIVE WEB PROJECTS.
+            </p>
+            <a href="https://www.instagram.com/ashrafi_ashfak__/" target="_blank" class="btn">INSTAGRAM</a>
+             <a href="https://www.snapchat.com/add/ashfak_72038" target="_blank" class="btn">SNAPCHAT</a>
+        </div>
+        <div class="glass-card">
+            <img src="dailyplan.jpeg" alt="profile">
+            <h2>BCA STUDENT</h2>
+            <p>
+                PASSIONATE ABOUT MODERN UI DESIGN,
+                ANIMATION AND RESPONSIVE LAYOUTS.
+            </p>
+        </div>
+        
+    </section>
+    <section class="dailyplan">
+        <div class="workoutbox" id="workout">
+            <h2>WORKOUT PLAN</h2>
+            <ul>
+                <li>MONDAY: CHEST AND TRICEPS</li>
+                <li>TUESDAY: BACK AND BICEPS</li>
+                <li>WEDNESDAY: LEGS AND SHOULDERS</li>
+                <li>THURSDAY: CARDIO AND CORE</li>
+                <li>FRIDAY: FULL BODY WORKOUT</li>
+                <li>SATURDAY: ACTIVE RECOVERY OR YOGA</li>
+                <li>SUNDAY: REST DAY</li>
+            </ul>
+        </div>
+        <div class="studybox" id="study">
+            <h2>STUDY PLAN</h2>
+            <ul>
+                <li>MONDAY: HTML & CSS BASICS</li>
+                <li>TUESDAY: JAVASCRIPT FUNDAMENTALS</li>
+                <li>WEDNESDAY: REACT / VUE / ANGULAR</li>
+                <li>THURSDAY: NODE.JS / EXPRESS / PYTHON</li>
+                <li>FRIDAY: DATABASES (MYSQL / MONGODB)</li>
+                <li>SATURDAY: PROJECT & PORTFOLIO BUILDING</li>
+                <li>SUNDAY: ENJOY MY DAY!</li>
+            </ul>
+        </div>
+        <div class="practicebox" id="practice">
+            <h2>PRACTICE PLAN</h2>
+            <ul>
+                <li>TIME: 2 HOURS DAILY AFTERNOON</li>
+                <li>MONDAY: PERSONAL PORTFOLIO WEBSITE</li>
+                <li>TUESDAY: TO-DO LIST APPLICATION</li>
+                <li>WEDNESDAY: WEATHER APP USING API</li>
+                <li>THURSDAY: RESPONSIVE BLOG DESIGN</li>
+                <li>FRIDAY: SIMPLE E-COMMERCE SITE</li>
+                <li>SATURDAY: OPEN-SOURCE CONTRIBUTION</li>
+                <li>SUNDAY: SHORT STUDY SESSION</li>
+            </ul>
+        </div>
+
+    </section>  
+
+</body>
+</html>
